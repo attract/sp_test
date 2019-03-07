@@ -1,0 +1,30 @@
+.persons_card{
+  .edit{
+    width:32px;
+    height:32px;
+    border-radius: 4px;
+    background: url("../../img/edit.svg") no-repeat center rgba(0,0,0,0.5);
+    position: absolute;
+    top:8px;
+    right: 8px;
+
+  }
+  .category_add{
+    float:right;
+    background: url("../../img/add.svg") no-repeat center ;
+    width:16px;
+    height:16px;
+  }
+}
+.slick-slide{
+
+  .persons_card{
+    margin-top:10px !important;
+    transition: margin-top 0.2s ease 0s;
+  }
+  &.slick-active,&.slick-current{
+    .persons_card{
+      margin-top:0px !important;
+    }
+  }
+}

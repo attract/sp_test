@@ -1,0 +1,47 @@
+<div *ngIf="data" class="persons_card">
+    <div class="main_banner" [ngStyle]="{'background-image': 'url(' + data.main_photo + ')', 'background-size':'cover'}">
+        <a class="edit"></a>
+        <div class="photos_text">
+            Appears in {{data.photos.length}} Photos
+        </div>
+        <div class="profile_photo" [ngStyle]="{'background-image': 'url(' + data.profile_photo + ')', 'background-size':'cover'}"></div>
+    </div>
+    <div class="content">
+        <div class="name">{{data.name}}</div>
+
+        <div class="info">
+            <div class="title">
+                <a class="category_add"></a>
+                Categories
+            </div>
+            <span *ngFor="let item of data.categories" class="category">
+                {{item}}
+                <a class="category_remove">&times;</a>
+            </span>
+        </div>
+        <div class="info">
+            <div class="title">Gender & Age</div>
+            {{data.gender}}, {{data.age}}
+        </div>
+        <div class="info">
+            <div class="title">Residence:</div>
+            {{data.residence}}
+        </div>
+        <div class="info">
+            <div class="title">Appearance:</div>
+            {{data.appearance}}
+        </div>
+        <div class="info">
+            <div class="title">Crime:</div>
+            {{data.crime}}
+        </div>
+        <div class="info">
+            <div class="title">Action taken:</div>
+            {{data.action_taken}}
+        </div>
+        <div class="info">
+            <div class="title">Additional notes:</div>
+            {{data.additional_note}}
+        </div>
+    </div>
+</div>

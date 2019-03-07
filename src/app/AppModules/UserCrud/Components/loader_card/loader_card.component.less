@@ -1,0 +1,83 @@
+.loader_card_container{
+  width: 256px;
+  border-radius: 4px 4px 0 0;
+  background-color: #FFFFFF;
+  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  margin: 0px auto;
+  &::after {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: -210%;
+    width: 200%;
+    height: 150%;
+    opacity: 0;
+    transform: rotate(30deg);
+    animation: cardAnimate 1.5s ease infinite;
+    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.0) 0%,
+            rgba(255, 255, 255, 0.1) 77%,
+            rgba(255, 255, 255, 0.8) 92%,
+            rgba(255, 255, 255, 0.0) 100%
+    );
+  }
+
+
+  @keyframes cardAnimate {
+    from {
+      opacity: 0;
+      top: -200%;
+      left: -210%;
+    }
+    to {
+      opacity: 1;
+      top: -30%;
+      left: -50%;
+      transition-property: left, top, opacity;
+      transition-duration: 1s, 1s, 0.30s;
+      transition-timing-function: ease;
+    }
+  }
+
+  .main_banner{
+    height:170px;
+    position: relative;
+    background: #919191;
+    border-radius: 4px 4px 0 0;
+  }
+  .profile_photo{
+    width: 64px;
+    height: 64px;
+    left: 16px;
+    bottom: -32px;
+    border-radius: 32px;
+    background: #e5e5e5;
+    position: absolute;
+  }
+  .content{
+    padding: 45px 16px 16px;
+    .name{
+      display: block;
+      background: #e5e5e5;
+      margin-bottom:13px;
+      height:28px;
+      width:120px
+    }
+    .short_line{
+      background: #e5e5e5;
+      margin-bottom:5px;
+      height:16px;
+      width:80px
+    }
+    .long_line{
+      background: #e5e5e5;
+      margin-bottom:5px;
+      height:16px;
+      width:150px
+    }
+  }
+}

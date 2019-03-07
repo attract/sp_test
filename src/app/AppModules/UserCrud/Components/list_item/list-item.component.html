@@ -1,0 +1,9 @@
+<a *ngIf="data" class="persons_list_card">
+    <div class="photo" [ngStyle]="{'background-image': 'url(' + data.profile_photo + ')', 'background-size':'cover'}">
+    </div>
+    <div class="content">
+        <div class="name">{{data.name}}</div>
+        <div class="gender">{{data.gender}}, {{data.age}}</div>
+        <div class="added">Added {{data.added}}</div>
+    </div>
+</a>

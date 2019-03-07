@@ -1,0 +1,45 @@
+.persons_list_card{
+  margin:0px 15px;
+  padding:8px 20px 8px 0px;
+  position: relative;
+  display: block;
+  &:after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-top: 1px solid #919191;
+    border-right: 1px solid #919191;
+    right: 5px;
+    margin-top: -5px;
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .photo{
+    float:left;
+    width: 50px;
+    height: 50px;
+    border-radius: 32px;
+    overflow: hidden;
+  }
+  .content{
+    margin-left:65px;
+    font-family: Roboto;
+    .name{
+      font-size: 18px;
+      font-weight: 500;
+      color: #000000;
+    }
+    .gender{
+      font-size:11px;
+      color: #484848;
+      font-weight: 300;
+    }
+    .added{
+      font-size: 11px;
+      color: #919191;
+      font-weight: 300;
+    }
+  }
+  overflow: hidden;
+}

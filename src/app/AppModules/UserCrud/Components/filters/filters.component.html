@@ -1,0 +1,45 @@
+<form class="filters">
+    <div class="filters_part1">
+        <div class="text">Persons</div>
+
+        <div class="search">
+            <input type="text">
+        </div>
+    </div>
+    <div class="filters_part2">
+
+        <div class="filter_sort filter_dropdown">
+            <a class="link">
+                Sort by
+                <span>Date added</span>
+            </a>
+            <ul class="dropdown">
+                <li><a>Date added</a></li>
+                <li><a>Younger first</a></li>
+                <li><a>Older first</a></li>
+            </ul>
+        </div>
+
+        <div class="filter_category filter_dropdown">
+            <a class="link">
+                Category
+                <span>Thiefs</span>
+            </a>
+            <ul class="dropdown">
+                <li><a>Thiefs</a></li>
+                <li><a>Manager</a></li>
+            </ul>
+        </div>
+
+        <div class="filter_toggle_nav">
+            <a class="list" [ngClass]="{'active':type==1}" (click)="type=1;changeType.emit(1)">
+                <span></span><span></span><span></span><span></span>
+            </a>
+            <a class="card" [ngClass]="{'active':type==0}" (click)="type=0;changeType.emit(0)">
+                <span></span><span></span><span></span>
+            </a>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+</form>

@@ -1,0 +1,18 @@
+<filters (changeType)="changeType($event)"></filters>
+
+
+<div class="personals_list" *ngIf="type==1">
+    <list-item-info  *ngFor="let item of list" [data]="item"></list-item-info>
+    <loader-list *ngIf="loader"></loader-list>
+</div>
+
+<div class="personals_card" *ngIf="type==0">
+    <loader-card  *ngIf="loader && list.length==0"></loader-card>
+
+    <ngx-slick class="personals_cards_container" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterSlideChange($event)">
+        <div ngxSlickItem *ngFor="let item of list" class="slide">
+            <card-info  [data]="item"></card-info>
+        </div>
+        <loader-card  ngxSlickItem *ngIf="loader && list.length!=0" class="slide"></loader-card>
+    </ngx-slick>
+</div>
