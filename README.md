@@ -1,9 +1,9 @@
-Install libs
+Install libs: 
 sudo npm install --unsafe-perm
 
-Run
+Run: 
 sudo npm run start  //this comand open the project in http://localhost:80/
 
-Build
+Build: 
 sudo npm run build  //this comand creade folder dist
 
