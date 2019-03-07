@@ -5,5 +5,5 @@ Run:
 sudo npm run start  //this comand open the project in http://localhost:80/
 
 Build: 
-sudo npm run build  //this comand creade folder dist
+sudo npm run build  //this comand create folder dist
 
